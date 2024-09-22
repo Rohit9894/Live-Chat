@@ -71,9 +71,5 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     socket.broadcast.emit("disc", "world");
   });
-  socket.on("mama", async (data) => {
-    const userr = await userModel.findByIdAndUpdate(data.userId, {
-      status: false,
-    });
-  });
+
 });
